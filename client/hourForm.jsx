@@ -30,16 +30,24 @@
       // 2 input elements and a submit button
 
       return (
-        <div className="container-fluid">
- 
-           <form className="form" onSubmit={this.handleSubmit}>
-               <div className="form-horizontal">
-                  <input className="form-control" ref="hour" type="number" name="hour" placeholder="How many hours?" />
-                  <input className="form-control" ref="date" type="date" name="date" placeholder="mm/dd/yyyy" />
-                  <button className="btn btn-default form-control" type="submit">Add</button>
-              </div>  
-           </form>
-         
+
+        <div class="container">
+            <div className="panel panel-default col-sm-3">
+              <div className="panel-heading">Hours Spent Coding</div>
+                  <div className="col-sm-12">
+                     <form className="form col-sm-12" onSubmit={this.handleSubmit}>
+                        <div className="row">
+                        <input className="col-sm-12" ref="hour" type="number" name="hour" placeholder="How many hours?" />
+                        </div>
+                        <div className="row">
+                        <input className="col-sm-12" ref="date" type="date" name="date" placeholder="mm/dd/yyyy" />
+                        </div>
+                        <div className="row">
+                        <button className="btn btn-primary col-sm-12" type="submit">Add</button>
+                        </div>
+                     </form>
+                  </div>   
+            </div> 
         </div>
       );
     }
